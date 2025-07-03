@@ -1,0 +1,14 @@
+services:
+  # Serviço da aplicação FastAPI
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: imerssao-alura
+    ports:
+      - "8000:8000"
+    volumes:
+      # Volume para persistir o banco SQLite
+      - ./escola.db:/app/escola.db
+      # Volume para desenvolvimento (hot reload)
+      - .:/app
