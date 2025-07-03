@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: imerssao-alura
+    container_name: imersao-alura
     ports:
       - "8000:8000"
     volumes:
